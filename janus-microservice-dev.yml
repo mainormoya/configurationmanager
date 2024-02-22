@@ -1,4 +1,5 @@
-inicializar: 1
+my:
+  uri: http://httpbin.org:80
 
 spring:
   cloud:
