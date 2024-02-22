@@ -13,3 +13,9 @@ spring:
           predicates:
             - Path=/html/**
             - Header=X-Subscription-Id, PA10100010001FA25684685245836
+
+        - id: Route_Ecuador
+          uri: http://httpbin.org:80
+          predicates:
+            - Path=/html/**
+            - Header=X-Subscription-Id, EC10100010001FA25684685245836
