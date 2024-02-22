@@ -1,3 +1,5 @@
+inicializar: 1
+
 spring:
   cloud:
     gateway:
