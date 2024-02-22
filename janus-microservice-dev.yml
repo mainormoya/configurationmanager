@@ -19,3 +19,9 @@ spring:
           predicates:
             - Path=/html/**
             - Header=X-Subscription-Id, EC10100010001FA25684685245836
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
