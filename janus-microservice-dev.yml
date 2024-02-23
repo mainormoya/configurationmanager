@@ -1,5 +1,5 @@
 my:
-  uri: http://httpbin.org:80
+  uri: http://httpbin11.org:80
 
 spring:
   - cloud:
