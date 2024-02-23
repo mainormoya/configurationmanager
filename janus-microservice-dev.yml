@@ -1,3 +1,6 @@
+my:
+  ipaddres: 127.0.0.1
+  
 spring:
   cloud:
       gateway:
