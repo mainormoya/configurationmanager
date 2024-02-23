@@ -1,0 +1,42 @@
+spring:
+  cloud:
+      gateway:
+          routes:
+            - id: Route_Nicaragua
+              uri: http://httpbin.org:80
+              predicates:
+                - Path=/html/**
+                - Header=X-Subscription-Id, NI10100010001FA25684685245836
+    
+            - id: Route_Panama
+              uri: http://httpbin.org:80
+              predicates:
+                - Path=/html/**
+                - Header=X-Subscription-Id, PA10100010001FA25684685245838
+    
+            - id: Route_Ecuador
+              uri: http://httpbin.org:80
+              predicates:
+                - Path=/html/**
+                - Header=X-Subscription-Id, EC10100010001FA25684685245836
+      bus:
+        enabled: true
+        refresh:
+          enabled: true
+        env:
+          enabled: true
+        trace:
+          enabled: true
+        rabbit:
+          enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: *
