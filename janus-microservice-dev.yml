@@ -19,6 +19,12 @@ spring:
               predicates:
                 - Path=/html/**
                 - Header=X-Subscription-Id, EC10100010001FA25684685245836
+                
+            - id: Route_Guatemala
+              uri: http://httpbin.org:80
+              predicates:
+                - Path=/html/**
+                - Header=X-Subscription-Id, GT10100010001FA25684685245836
       bus:
         enabled: true
         refresh:
