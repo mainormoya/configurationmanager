@@ -25,6 +25,11 @@ spring:
               predicates:
                 - Path=/html/**
                 - Header=X-Subscription-Id, GT10100010001FA25684685245836
+                
+            - id: Route_Actuator
+              uri: http://127.0.0.1:8080
+              predicates:
+                - Path=/actuator/**
       bus:
         enabled: true
         refresh:
