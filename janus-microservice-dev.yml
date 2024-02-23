@@ -1,3 +1,25 @@
+# Configuración de RabbitMQ
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+# Configuración de Spring Cloud Bus con RabbitMQ
+spring:
+  cloud:
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+      env:
+        enabled: true
+      trace:
+        enabled: true
+      rabbit:
+        enabled: true
+        
 my:
   uri: http://httpbin.org:80
 
