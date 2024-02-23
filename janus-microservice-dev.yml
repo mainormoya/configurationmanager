@@ -19,6 +19,16 @@ spring:
               predicates:
                 - Path=/html/**
                 - Header=X-Subscription-Id, EC10100010001FA25684685245836
+      bus:
+        enabled: true
+        refresh:
+          enabled: true
+        env:
+          enabled: true
+        trace:
+          enabled: true
+        rabbit:
+          enabled: true
     
 management:
   endpoints:
